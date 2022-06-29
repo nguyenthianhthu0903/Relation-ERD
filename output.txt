@@ -1,0 +1,68 @@
+
+Bang Nha_san_xuat
+	 P_MaNhaSanXuat 
+	 TenNhaSanXuat 
+	 QuocTich 
+
+Bang Mat_hang
+	 P_Mamathang 
+	 Tenhang 
+	 Soluong 
+	 Dongia 
+	 Donvitinh 
+
+Bang Nha_cung_cap
+	 P_Manhacungcap 
+	 Tennhacungcap 
+	 Diachi 
+
+Bang Chi_tiet_phieu_nhap_hang
+	 P_STT 
+	 F_Maphieunhap 
+	 Dongia 
+	 F_Mamathang 
+	 F_Manhacungcap 
+	 Soluong 
+	 Thanhtien 
+
+Bang Chi_tiet_phieu_ban_hang
+	 P_STT 
+	 Maphieuban 
+	 F_Mamathang 
+	 Dongia 
+	 Soluong 
+	 Thanhtien 
+
+Bang Phieu_ban_hang
+	 P_Maphieuban 
+	 F_Makhachhang 
+	 Tenkhachhang 
+
+Bang Khach_hang
+	 P_Makhachhang 
+	 Tenkhachhang 
+	 Diachi 
+
+Bang Quay_hang
+	 P_Soquay 
+	 Tenquay 
+	 Vitri 
+
+Bang Moi_quan_he
+
+<NSX>
+ 	Nha_san_xuat (1,1) -------------------- (1,n) Mat_hang
+<Cung cap>
+ 	Mat_hang (1,n) -------------------- (1,n) Nha_cung_cap
+<Quan ly nhap hang>
+ 	Mat_hang (1,1) -------------------- (1,n) Chi_tiet_phieu_nhap hang
+<Quan ly ban hang>
+ 	Mat hang (1,1) -------------------- (1,n) Chi_tiet_phieu_ban_hang
+<Quay hang>
+ 	Mat_hang (1,1) -------------------- (1,n) Quay_hang
+<Nhap hang>
+ 	Chi_tiet_phieu_nhap_hang (1,n) ------------ (1,n) phieu_nhap_hang
+<Ban hang>
+ 	Chi tiet phieu ban hang (1,1) -------------------- (1,n) Phieu_ban_hang
+<Khach hang>
+ 	Phieu_ban_hang (1,1) -------------------- (1,n) Khach_hang
